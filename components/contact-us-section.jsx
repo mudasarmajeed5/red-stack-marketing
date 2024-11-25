@@ -36,7 +36,7 @@ export default function ContactUsSection() {
   return (
     (<section className="bg-black text-white py-16">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-red-500 mb-12 text-center">Contact Us</h2>
+        <h2 className="text-4xl font-bold text-red-500 mb-12 text-center uppercase">Contact Us</h2>
         <form onSubmit={handleSubmit} className="max-w-2xl mx-auto">
           <div className="mb-6">
             <label htmlFor="name" className="block mb-2 text-sm font-medium">Name</label>

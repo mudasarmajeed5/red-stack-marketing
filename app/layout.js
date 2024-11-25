@@ -29,10 +29,6 @@ export default function RootLayout({ children }) {
       >
         <Navbar/>
         <div className="socials1">
-            <button className="bg-black p-1 hover:right-0 rounded-md md:flex hidden gap-2 text-white">
-              <span className="text-2xl hover:text-white"><FaCalendarDay /></span>
-              <Link href="/BookAnAppointment" className="show-text">Meeting</Link>
-            </button>
             <button className="bg-green-600 p-1 hover:right-0 rounded-md flex gap-2 text-white">
               <span className="text-2xl hover:text-white"><FaWhatsapp /></span>
               <Link href="https://wa.me/92123456789" className="show-text">WhatsApp</Link>

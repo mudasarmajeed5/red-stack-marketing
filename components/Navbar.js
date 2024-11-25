@@ -231,7 +231,6 @@ const Navbar = () => {
                 <RxCross2 onClick={() => setDropDown(!DropDown)} className="text-[--text-color] relative z-20" />
               ) : (
                 <span className="flex gap-1 text-[20px] text-[--secondary-button] font-extralight items-center">
-                  <Link href="/BookAnAppointment"><FaCalendarDay /> </Link>
                   <FaPhone />|
                   <span onClick={() => setDropDown(!DropDown)} className="cursor-pointer">
                     <TiThMenu />

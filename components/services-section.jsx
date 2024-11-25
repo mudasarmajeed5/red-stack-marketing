@@ -45,13 +45,13 @@ export default function ServicesSection() {
       imagePosition: "left",
       image: "/images/print media.png",
     },
-    {
-      title: "Airing",
-      description: "We craft compelling TV ads and secure airtime for maximum reach, making your brand memorable on television.",
-      icon: Radio,
-      imagePosition: "right",
-      image: "/images/airing.png",
-    },
+    // {
+    //   title: "Airing",
+    //   description: "We craft compelling TV ads and secure airtime for maximum reach, making your brand memorable on television.",
+    //   icon: Radio,
+    //   imagePosition: "right",
+    //   image: "/images/airing.png",
+    // },
     {
       title: "Outdoor Advertising",
       description: "Our outdoor advertising captures attention with strategically placed billboards and digital screens.",
@@ -71,7 +71,7 @@ export default function ServicesSection() {
             className={`flex flex-col ${service.imagePosition === 'right' ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-16`}>
             <div className="flex-1 space-y-6">
               <service.icon className="w-16 h-16 text-red-500" />
-              <h3 className="text-4xl font-bold text-white">{service.title}</h3>
+              <h3 className="text-4xl font-bold text-white uppercase">{service.title}</h3>
               <p className="text-zinc-400 text-lg leading-relaxed">{service.description}</p>
               <Button
                 variant="outline"
