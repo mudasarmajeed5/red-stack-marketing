@@ -1,0 +1,117 @@
+:root {
+    --primary-bg-color: #ffffff;  /* White */
+    --primary-text-color: #ffffff;  /* White text for navbar */
+    --secondary-button: #e63946; /* Red for buttons and highlights */
+    --black-color: #000000; /* Black color */
+    --slate-blue: #1d3557; /* Blue-ish color for vertical buttons */
+    --bg-color: #111010; /* Light background for content areas */
+    --navbar-bg-color: #333333; /* Dark background for navbar */
+    --navbar-border-color: #444444; /* Border color for navbar items */
+    --secondary-text-color: #888888; /* Grey text for secondary items */
+    --button-hover-bg: #e63946; /* Red for hover effects on buttons */
+    --button-text-color: #ffffff; /* White text on buttons */
+    --link-hover-color: #e63946; /* Red for link hover effect */
+    --link-text-color: #333333; /* Dark text for links */
+}
+
+@keyframes increaseHeight {
+    100% {
+        opacity: 1;
+        width: 100vw;
+        height: 100vh;
+        background-color:var(--bg-color);
+    }
+}
+.IsProjectsOpen {
+    border-bottom: 1px solid var(--secondary-button);
+}
+
+.navbar-name {
+    font-family: "Signika", sans-serif;
+}
+
+.getquote {
+    transition:all 0.2s ease;
+}
+.getquote:hover{
+    color: var(--secondary-button);
+}
+.getquote1{
+    transition:all 0.2s ease;
+    border-bottom: 1px solid var(--secondary-button);
+    padding: 5px 10px;
+}
+.getquote1:hover {
+    background-color: var(--secondary-button);
+}
+
+.HamBurger_DropDown {
+    position: absolute;
+    width: 0vw;
+    height: 0vh;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    font-size: 1rem;
+    gap: 10px;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    animation: .3s cubic-bezier(0.165, 0.84, 0.44, 1) increaseHeight forwards;
+}
+.overseasportal{
+    animation: overseas 2s ease infinite;
+}
+@keyframes overseas{
+    100%,0%{
+        background-color: transparent;
+    }
+    50%{
+        background-color: var(--secondary-button);
+    }
+}
+/* Navbar buttons for PC */
+.vertical-buttons {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.vertical-buttons button {
+    white-space: nowrap;
+    writing-mode: vertical-lr;
+    background-color: var(--slate-blue);
+    color: white;
+    padding: 12px 4px;
+    border: none;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+.vertical-buttons button:hover {
+    transform: translateX(5%);
+}
+
+.socials {
+    position: fixed;
+    bottom: 10%;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.socials button{
+    position: relative;
+    right: -95px;
+    transition: all 0.2s ease;
+}
+
+@media only screen and (min-width:767px) {
+    .vertical-buttons {
+        display: flex;
+    }
+}
