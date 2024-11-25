@@ -1,14 +1,14 @@
 'use client'
 import "./Navbar.css"
+import { TiThMenu } from "react-icons/ti";
 import { IoIosArrowDown } from "react-icons/io";
 import { FaPhone } from "react-icons/fa";
 import { FaCalendarDay } from "react-icons/fa6";
 import { useState } from "react";
 import { RxCross2 } from "react-icons/rx";
-import {  FaMapLocationDot } from "react-icons/fa6";
-import { SlGrid } from "react-icons/sl";
 import { IoCallSharp } from "react-icons/io5";
 import { useRouter } from "next/navigation";
+
 import Link from "next/link";
 const Navbar = () => {
   const [DropDown, setDropDown] = useState(false)
@@ -220,6 +220,9 @@ const Navbar = () => {
       </div>
 
 
+
+      {/* Mobile Navbar */}
+
       <div className="place-self-center justify-self-end">
         <div className="md:hidden justify-center text-2xl flex items-center">
           <div>
@@ -228,11 +231,10 @@ const Navbar = () => {
                 <RxCross2 onClick={() => setDropDown(!DropDown)} className="text-[--text-color] relative z-20" />
               ) : (
                 <span className="flex gap-1 text-[20px] text-[--secondary-button] font-extralight items-center">
-                  <Link href="/BookAnAppointment"><FaCalendarDay /> </Link>|
-                  <FaMapLocationDot /> |
+                  <Link href="/BookAnAppointment"><FaCalendarDay /> </Link>
                   <FaPhone />|
                   <span onClick={() => setDropDown(!DropDown)} className="cursor-pointer">
-                    <SlGrid />
+                    <TiThMenu />
                   </span>
                 </span>
               )}
@@ -241,13 +243,12 @@ const Navbar = () => {
           <div className="flex flex-col gap-3">
             <ul className={`${DropDown ? 'HamBurger_DropDown ' : 'hidden'} text-[--text-color] bg-[--bg-color]`}>
               <div className="mt-[15%] px-2">
-
-                {/* Projects Dropdown */}
-                <div className="px-2 py-1 text-left rounded-lg relative">
-                  <Link href="/">Home</Link>
+                {/* Mobile menu items */}
+                <div className="px-2 hover:bg-red-600 ml-2 py-1 text-left relative">
+                  <Link href="/" onClick={() => setDropDown(false)}>Home</Link>
                 </div>
 
-                {/* DHA Assist Dropdown */}
+                {/* Services Dropdown */}
                 <div className="px-2 py-1 rounded-lg relative">
                   <button
                     className="getquote1 w-full hover:-translate-y-[1px] transition-all flex justify-between items-center"
@@ -258,63 +259,22 @@ const Navbar = () => {
                   </button>
                   {isDhaOpen && (
                     <div className="z-10 text-left divide-y divide-gray-100 rounded-lg w-44 mt-2">
-                      <ul className="py-2 text-sm text-white">
-                        <li>
-                          <Link href="#creative-agency" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
-                            <span>Creative Agency</span>
-                            <span className="absolute z-[-100] left-0 top-0 bottom-0 bg-[--secondary-button] transition-all duration-300 ease-in-out w-0 group-hover:w-full"></span>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="#visual-story-telling" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
-                            <span>Visual Story Telling</span>
-                            <span className="absolute z-[-100] left-0 top-0 bottom-0 bg-[--secondary-button] transition-all duration-300 ease-in-out w-0 group-hover:w-full"></span>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="#event-management" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
-                            <span>Event Management</span>
-                            <span className="absolute z-[-100] left-0 top-0 bottom-0 bg-[--secondary-button] transition-all duration-300 ease-in-out w-0 group-hover:w-full"></span>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="#digital-marketing" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
-                            <span>Digital Marketing</span>
-                            <span className="absolute z-[-100] left-0 top-0 bottom-0 bg-[--secondary-button] transition-all duration-300 ease-in-out w-0 group-hover:w-full"></span>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="#branding" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
-                            <span>Branding</span>
-                            <span className="absolute z-[-100] left-0 top-0 bottom-0 bg-[--secondary-button] transition-all duration-300 ease-in-out w-0 group-hover:w-full"></span>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="#print-media" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
-                            <span>Print Media</span>
-                            <span className="absolute z-[-100] left-0 top-0 bottom-0 bg-[--secondary-button] transition-all duration-300 ease-in-out w-0 group-hover:w-full"></span>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="#airing" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
-                            <span>Airing</span>
-                            <span className="absolute z-[-100] left-0 top-0 bottom-0 bg-[--secondary-button] transition-all duration-300 ease-in-out w-0 group-hover:w-full"></span>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="#outdoor-advertising" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
-                            <span>Outdoor Advertising</span>
-                            <span className="absolute z-[-100] left-0 top-0 bottom-0 bg-[--secondary-button] transition-all duration-300 ease-in-out w-0 group-hover:w-full"></span>
-                          </Link>
-                        </li>
+                      <ul className="py-2 ml-4 text-sm">
+                        <li><Link href="#creative-agency" className="block py-2 px-2 hover:text-[--secondary-button]" onClick={() => setDropDown(false)}>Creative Agency</Link></li>
+                        <li><Link href="#visual-story-telling" className="block py-2 px-2 hover:text-[--secondary-button]" onClick={() => setDropDown(false)}>Visual Story Telling</Link></li>
+                        <li><Link href="#event-management" className="block py-2 px-2 hover:text-[--secondary-button]" onClick={() => setDropDown(false)}>Event Management</Link></li>
+                        <li><Link href="#digital-marketing" className="block py-2 px-2 hover:text-[--secondary-button]" onClick={() => setDropDown(false)}>Digital Marketing</Link></li>
+                        <li><Link href="#branding" className="block py-2 px-2 hover:text-[--secondary-button]" onClick={() => setDropDown(false)}>Branding</Link></li>
+                        <li><Link href="#print-media" className="block py-2 px-2 hover:text-[--secondary-button]" onClick={() => setDropDown(false)}>Print Media</Link></li>
+                        <li><Link href="#airing" className="block py-2 px-2 hover:text-[--secondary-button]" onClick={() => setDropDown(false)}>Airing</Link></li>
+                        <li><Link href="#outdoor-advertising" className="block py-2 px-2 hover:text-[--secondary-button]" onClick={() => setDropDown(false)}>Outdoor Advertising</Link></li>
                       </ul>
-
                     </div>
                   )}
                 </div>
 
-                {/* About Us Dropdown */}
-                <div className="px-2 py-1  rounded-lg relative">
+                {/* About Dropdown */}
+                <div className="px-2 py-1 rounded-lg relative">
                   <button
                     className="getquote1 w-full hover:-translate-y-[1px] transition-all flex justify-between items-center"
                     onClick={() => toggleAbout(!isAboutOpen)}
@@ -325,17 +285,15 @@ const Navbar = () => {
                   {isAboutOpen && (
                     <div className="z-10 text-left divide-y divide-gray-100 rounded-lg w-44 mt-2">
                       <ul className="py-2 text-sm">
-                        <li>
-                          <Link href="/aboutus" className="block px-2 hover:text-[--secondary-button] py-2">Our Story</Link>
-                        </li>
-                        <li>
-                          <Link href="/leaders" className="block px-2 hover:text-[--secondary-button] py-2">Leaders</Link>
-                        </li>
+                        <li><Link href="/aboutus" className="block px-2 hover:text-[--secondary-button] py-2" onClick={() => setDropDown(false)}>Our Story</Link></li>
+                        <li><Link href="/leaders" className="block px-2 hover:text-[--secondary-button] py-2" onClick={() => setDropDown(false)}>Leaders</Link></li>
+                        <li><Link href="/team" className="block px-2 hover:text-[--secondary-button] py-2" onClick={() => setDropDown(false)}>Team</Link></li>
                       </ul>
                     </div>
                   )}
                 </div>
-                {/* Media DropDown */}
+
+                {/* Media Dropdown */}
                 <div className="px-2 py-1 rounded-lg relative">
                   <button
                     className="getquote1 w-full hover:-translate-y-[1px] transition-all flex justify-between items-center"
@@ -347,25 +305,18 @@ const Navbar = () => {
                   {isMediaOpen && (
                     <div className="z-10 text-left divide-y divide-gray-100 rounded-lg shadow w-44 absolute mt-2">
                       <ul className="py-2 text-sm">
-                        <li>
-                          <Link href="#" className="block px-2 hover:text-[--secondary-button] py-2">Images</Link>
-                        </li>
-                        <li>
-                          <Link href="#" className="block px-2 hover:text-[--secondary-button] py-2">Videos</Link>
-                        </li>
-                        <li>
-                          <Link href="#" className="block px-2 hover:text-[--secondary-button] py-2">3D Tour/Map</Link>
-                        </li>
+                        <li><Link href="#" className="block px-2 hover:text-[--secondary-button] py-2" onClick={() => setDropDown(false)}>Images</Link></li>
+                        <li><Link href="#" className="block px-2 hover:text-[--secondary-button] py-2" onClick={() => setDropDown(false)}>Videos</Link></li>
                       </ul>
                     </div>
                   )}
                 </div>
-
               </div>
             </ul>
           </div>
         </div>
       </div>
+
     </div>
   )
 }
