@@ -1,14 +1,15 @@
 'use client'
 import "./Navbar.css"
 import { IoIosArrowDown } from "react-icons/io";
-import { FaArrowRight, FaPhone } from "react-icons/fa";
+import { FaPhone } from "react-icons/fa";
 import { FaCalendarDay } from "react-icons/fa6";
 import { useState } from "react";
 import { RxCross2 } from "react-icons/rx";
-import { FaEarthAsia, FaMapLocationDot } from "react-icons/fa6";
+import {  FaMapLocationDot } from "react-icons/fa6";
 import { SlGrid } from "react-icons/sl";
 import { IoCallSharp } from "react-icons/io5";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 const Navbar = () => {
   const [DropDown, setDropDown] = useState(false)
   const [isProjectsOpen, setIsProjectsOpen] = useState(false);
@@ -52,13 +53,13 @@ const Navbar = () => {
 
 
       <div onClick={() => router.push('/')} className="md:text-3xl text-2xl cursor-pointer underline-offset-4 navbar-name">
-        <img src="https://reinvention.vercel.app/dhalogo.png" width={150} alt="" />
+        <img src="https://colors-agency.vercel.app/Logo-Analysis.svg" width={55} alt="" />
       </div>
 
       <div className="md:flex ml-[-5%] place-self-center gap-0 hidden" >
         {/* Projects Dropdown */}
         <div className="px-2 py-1 rounded-lg relative">
-          <a href="/">Home</a>
+          <Link href="/">Home</Link>
         </div>
 
         {/* DHA Assist Dropdown */}
@@ -79,52 +80,52 @@ const Navbar = () => {
             >
               <ul className="py-2 text-sm text-black">
                 <li>
-                  <a href="#creative-agency" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
+                  <Link href="#creative-agency" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
                     <span>Creative Agency</span>
                     <span className="absolute z-[-100] left-0 top-0 bottom-0 bg-[--secondary-button] transition-all duration-300 ease-in-out w-0 group-hover:w-full"></span>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#visual-story-telling" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
+                  <Link href="#visual-story-telling" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
                     <span>Visual Story Telling</span>
                     <span className="absolute z-[-100] left-0 top-0 bottom-0 bg-[--secondary-button] transition-all duration-300 ease-in-out w-0 group-hover:w-full"></span>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#event-management" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
+                  <Link href="#event-management" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
                     <span>Event Management</span>
                     <span className="absolute z-[-100] left-0 top-0 bottom-0 bg-[--secondary-button] transition-all duration-300 ease-in-out w-0 group-hover:w-full"></span>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#digital-marketing" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
+                  <Link href="#digital-marketing" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
                     <span>Digital Marketing</span>
                     <span className="absolute z-[-100] left-0 top-0 bottom-0 bg-[--secondary-button] transition-all duration-300 ease-in-out w-0 group-hover:w-full"></span>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#branding" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
+                  <Link href="#branding" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
                     <span>Branding</span>
                     <span className="absolute z-[-100] left-0 top-0 bottom-0 bg-[--secondary-button] transition-all duration-300 ease-in-out w-0 group-hover:w-full"></span>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#print-media" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
+                  <Link href="#print-media" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
                     <span>Print Media</span>
                     <span className="absolute z-[-100] left-0 top-0 bottom-0 bg-[--secondary-button] transition-all duration-300 ease-in-out w-0 group-hover:w-full"></span>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#airing" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
+                  <Link href="#airing" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
                     <span>Airing</span>
                     <span className="absolute z-[-100] left-0 top-0 bottom-0 bg-[--secondary-button] transition-all duration-300 ease-in-out w-0 group-hover:w-full"></span>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#outdoor-advertising" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
+                  <Link href="#outdoor-advertising" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
                     <span>Outdoor Advertising</span>
                     <span className="absolute z-[-100] left-0 top-0 bottom-0 bg-[--secondary-button] transition-all duration-300 ease-in-out w-0 group-hover:w-full"></span>
-                  </a>
+                  </Link>
                 </li>
               </ul>
 
@@ -151,16 +152,16 @@ const Navbar = () => {
             >
               <ul className="py-2 text-sm text-black">
                 <li>
-                  <a href="/aboutus" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
+                  <Link href="/aboutus" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
                     <span>Our Story</span>
                     <span className="absolute z-[-100] left-0 top-0 bottom-0 bg-[--secondary-button] transition-all duration-300 ease-in-out w-0 group-hover:w-full"></span>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/leaders" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
+                  <Link href="/leaders" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
                     <span>Leaders</span>
                     <span className="absolute z-[-100] left-0 top-0 bottom-0 bg-[--secondary-button] transition-all duration-300 ease-in-out w-0 group-hover:w-full"></span>
-                  </a>
+                  </Link>
                 </li>
 
               </ul>
@@ -170,7 +171,7 @@ const Navbar = () => {
 
         {/* Media DropDown */}
         <div className="px-2 py-1 rounded-lg relative">
-          <a href="/careers">Careers</a>
+          <Link href="/careers">Careers</Link>
         </div>
         {/* Media DropDown */}
         <div className="px-2 py-1 rounded-lg relative">
@@ -190,22 +191,22 @@ const Navbar = () => {
             >
               <ul className="py-2 text-sm text-black">
                 <li>
-                  <a href="#" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
+                  <Link href="#" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
                     <span>Images</span>
                     <span className="absolute z-[-100] left-0 top-0 bottom-0 bg-[--secondary-button] transition-all duration-300 ease-in-out w-0 group-hover:w-full"></span>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
+                  <Link href="#" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
                     <span>Videos</span>
                     <span className="absolute z-[-100] left-0 top-0 bottom-0 bg-[--secondary-button] transition-all duration-300 ease-in-out w-0 group-hover:w-full"></span>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
+                  <Link href="#" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
                     <span>3D Tour / Maps</span>
                     <span className="absolute z-[-100] left-0 top-0 bottom-0 bg-[--secondary-button] transition-all duration-300 ease-in-out w-0 group-hover:w-full"></span>
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -227,7 +228,7 @@ const Navbar = () => {
                 <RxCross2 onClick={() => setDropDown(!DropDown)} className="text-[--text-color] relative z-20" />
               ) : (
                 <span className="flex gap-1 text-[20px] text-[--secondary-button] font-extralight items-center">
-                  <a href="/BookAnAppointment"><FaCalendarDay /> </a>|
+                  <Link href="/BookAnAppointment"><FaCalendarDay /> </Link>|
                   <FaMapLocationDot /> |
                   <FaPhone />|
                   <span onClick={() => setDropDown(!DropDown)} className="cursor-pointer">
@@ -243,7 +244,7 @@ const Navbar = () => {
 
                 {/* Projects Dropdown */}
                 <div className="px-2 py-1 text-left rounded-lg relative">
-                  <a href="/">Home</a>
+                  <Link href="/">Home</Link>
                 </div>
 
                 {/* DHA Assist Dropdown */}
@@ -259,52 +260,52 @@ const Navbar = () => {
                     <div className="z-10 text-left divide-y divide-gray-100 rounded-lg w-44 mt-2">
                       <ul className="py-2 text-sm text-white">
                         <li>
-                          <a href="#creative-agency" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
+                          <Link href="#creative-agency" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
                             <span>Creative Agency</span>
                             <span className="absolute z-[-100] left-0 top-0 bottom-0 bg-[--secondary-button] transition-all duration-300 ease-in-out w-0 group-hover:w-full"></span>
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#visual-story-telling" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
+                          <Link href="#visual-story-telling" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
                             <span>Visual Story Telling</span>
                             <span className="absolute z-[-100] left-0 top-0 bottom-0 bg-[--secondary-button] transition-all duration-300 ease-in-out w-0 group-hover:w-full"></span>
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#event-management" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
+                          <Link href="#event-management" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
                             <span>Event Management</span>
                             <span className="absolute z-[-100] left-0 top-0 bottom-0 bg-[--secondary-button] transition-all duration-300 ease-in-out w-0 group-hover:w-full"></span>
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#digital-marketing" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
+                          <Link href="#digital-marketing" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
                             <span>Digital Marketing</span>
                             <span className="absolute z-[-100] left-0 top-0 bottom-0 bg-[--secondary-button] transition-all duration-300 ease-in-out w-0 group-hover:w-full"></span>
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#branding" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
+                          <Link href="#branding" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
                             <span>Branding</span>
                             <span className="absolute z-[-100] left-0 top-0 bottom-0 bg-[--secondary-button] transition-all duration-300 ease-in-out w-0 group-hover:w-full"></span>
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#print-media" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
+                          <Link href="#print-media" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
                             <span>Print Media</span>
                             <span className="absolute z-[-100] left-0 top-0 bottom-0 bg-[--secondary-button] transition-all duration-300 ease-in-out w-0 group-hover:w-full"></span>
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#airing" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
+                          <Link href="#airing" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
                             <span>Airing</span>
                             <span className="absolute z-[-100] left-0 top-0 bottom-0 bg-[--secondary-button] transition-all duration-300 ease-in-out w-0 group-hover:w-full"></span>
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#outdoor-advertising" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
+                          <Link href="#outdoor-advertising" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
                             <span>Outdoor Advertising</span>
                             <span className="absolute z-[-100] left-0 top-0 bottom-0 bg-[--secondary-button] transition-all duration-300 ease-in-out w-0 group-hover:w-full"></span>
-                          </a>
+                          </Link>
                         </li>
                       </ul>
 
@@ -325,10 +326,10 @@ const Navbar = () => {
                     <div className="z-10 text-left divide-y divide-gray-100 rounded-lg w-44 mt-2">
                       <ul className="py-2 text-sm">
                         <li>
-                          <a href="/aboutus" className="block px-2 hover:text-[--secondary-button] py-2">Our Story</a>
+                          <Link href="/aboutus" className="block px-2 hover:text-[--secondary-button] py-2">Our Story</Link>
                         </li>
                         <li>
-                          <a href="/leaders" className="block px-2 hover:text-[--secondary-button] py-2">Leaders</a>
+                          <Link href="/leaders" className="block px-2 hover:text-[--secondary-button] py-2">Leaders</Link>
                         </li>
                       </ul>
                     </div>
@@ -347,13 +348,13 @@ const Navbar = () => {
                     <div className="z-10 text-left divide-y divide-gray-100 rounded-lg shadow w-44 absolute mt-2">
                       <ul className="py-2 text-sm">
                         <li>
-                          <a href="#" className="block px-2 hover:text-[--secondary-button] py-2">Images</a>
+                          <Link href="#" className="block px-2 hover:text-[--secondary-button] py-2">Images</Link>
                         </li>
                         <li>
-                          <a href="#" className="block px-2 hover:text-[--secondary-button] py-2">Videos</a>
+                          <Link href="#" className="block px-2 hover:text-[--secondary-button] py-2">Videos</Link>
                         </li>
                         <li>
-                          <a href="#" className="block px-2 hover:text-[--secondary-button] py-2">3D Tour/Map</a>
+                          <Link href="#" className="block px-2 hover:text-[--secondary-button] py-2">3D Tour/Map</Link>
                         </li>
                       </ul>
                     </div>

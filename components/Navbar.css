@@ -29,7 +29,13 @@
 .navbar-name {
     font-family: "Signika", sans-serif;
 }
-
+.id{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
 .getquote {
     transition:all 0.2s ease;
 }

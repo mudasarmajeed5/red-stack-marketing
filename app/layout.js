@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Link from "next/link";
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -11,7 +12,6 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
-import Link from "next/link";
 import { FaCalendarDay } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaFacebook,FaWhatsapp} from "react-icons/fa";
@@ -31,11 +31,11 @@ export default function RootLayout({ children }) {
         <div className="socials1">
             <button className="bg-black p-1 hover:right-0 rounded-md md:flex hidden gap-2 text-white">
               <span className="text-2xl hover:text-white"><FaCalendarDay /></span>
-              <a href="/BookAnAppointment" className="show-text">Meeting</a>
+              <Link href="/BookAnAppointment" className="show-text">Meeting</Link>
             </button>
             <button className="bg-green-600 p-1 hover:right-0 rounded-md flex gap-2 text-white">
               <span className="text-2xl hover:text-white"><FaWhatsapp /></span>
-              <a href="https://wa.me/92123456789" className="show-text">WhatsApp</a>
+              <Link href="https://wa.me/92123456789" className="show-text">WhatsApp</Link>
             </button>
             <button className="bg-[#0866ff] p-1 hover:right-0 rounded-md flex gap-2 text-white">
               <span className="text-2xl hover:text-white"><FaFacebook /></span>
