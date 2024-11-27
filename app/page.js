@@ -17,16 +17,20 @@ export default function Home() {
           <div className="flex gap-2">
             <button className='text-white backdrop:blur-sm mt-20 bg-red-600 text-xl rounded-md hover:bg-red-700 animate-bounce px-3 py-1'><Link href="#creative-agency">Explore Services</Link></button>
           </div>
-          <div className='flex justify-center items-center text-xl md:text-2xl lets_talk gap-2 mt-5 text-white font-sans'>Wanna get in Touch?<span><Link href="">Lets Talk...</Link></span></div>
-        </div>
+          <div className='flex justify-center items-center text-xl md:text-2xl lets_talk gap-2 mt-5 text-white font-sans'>Wanna get in Touch?<span><Link href="#contact">Lets Talk...</Link></span></div>
+        </div >
         {/* Adding a tag here with postion absolute will make it appear on the first page at the end of the image. */}
         <div className="absolute bottom-0 w-full">
         <Carousel />
         </div>
       </div>
       <ServicesSection/>
-      <BlogWorkSection/>
+      <div id="blogs">
+      {/* <BlogWorkSection/> */}
+      </div>
+      <div id="contact">
       <ContactUsSection/>
+      </div>
       <Footer/>
     </>
   );

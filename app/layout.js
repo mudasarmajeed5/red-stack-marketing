@@ -2,6 +2,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
+import { Toaster, toast } from 'sonner'
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -28,10 +29,11 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Navbar/>
+        <Toaster />
         <div className="socials1">
             <button className="bg-green-600 p-1 hover:right-0 rounded-md flex gap-2 text-white">
               <span className="text-2xl hover:text-white"><FaWhatsapp /></span>
-              <Link href="https://wa.me/92123456789" className="show-text">WhatsApp</Link>
+              <Link href="https://wa.me/923365954484" className="show-text">WhatsApp</Link>
             </button>
             <button className="bg-[#0866ff] p-1 hover:right-0 rounded-md flex gap-2 text-white">
               <span className="text-2xl hover:text-white"><FaFacebook /></span>
@@ -39,7 +41,7 @@ export default function RootLayout({ children }) {
             </button>
             <button className="bg-pink-600 p-1 hover:right-0 rounded-md flex gap-2 text-white">
               <span className="text-2xl hover:text-white"><IoLogoInstagram /></span>
-              <Link href={'#'}><span className="show-text">Instagram</span></Link>
+              <Link href={'https://www.instagram.com/redstackmarketing/'}><span className="show-text">Instagram</span></Link>
             </button>
             <button className="bg-black text-white p-1 hover:right-0 rounded-md flex gap-2">
               <span className="text-2xl"><FaXTwitter/></span>

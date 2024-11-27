@@ -168,48 +168,13 @@ const Navbar = () => {
         </div>
         {/* Media DropDown */}
         <div className="px-2 py-1 rounded-lg relative">
-          <button
-            className="getquote hover:-translate-y-[1px] hover:text-green-500 transition-all flex justify-center items-center"
-            onMouseEnter={() => toggleMedia(true)}
-            onMouseLeave={() => toggleMedia(false)}
-          >
-            <span>Blogs</span>
-            <span><IoIosArrowDown /></span>
-          </button>
-          {isMediaOpen && (
-            <div
-              onMouseEnter={() => toggleMedia(true)}
-              onMouseLeave={() => toggleMedia(false)}
-              className="z-10 text-left bg-white divide-y divide-gray-100 rounded-lg shadow w-44 absolute"
-            >
-              <ul className="py-2 text-sm text-black">
-                <li>
-                  <Link href="#" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
-                    <span>Images</span>
-                    <span className="absolute z-[-100] left-0 top-0 bottom-0 bg-[--secondary-button] transition-all duration-300 ease-in-out w-0 group-hover:w-full"></span>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
-                    <span>Videos</span>
-                    <span className="absolute z-[-100] left-0 top-0 bottom-0 bg-[--secondary-button] transition-all duration-300 ease-in-out w-0 group-hover:w-full"></span>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
-                    <span>3D Tour / Maps</span>
-                    <span className="absolute z-[-100] left-0 top-0 bottom-0 bg-[--secondary-button] transition-all duration-300 ease-in-out w-0 group-hover:w-full"></span>
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          )}
+          <Link href={"#blogs"}>Blogs</Link>
         </div>
 
       </div>
 
       <div className="contact ml-[-5%] place-self-center md:flex hidden gap-1">
-        <button className="rounded-full px-2 py-1 border-2 border-[--secondary-button] hover:bg-[--secondary-button] hover:text-white transition-all duration-300 flex gap-1 justify-center items-center"><span><IoCallSharp /></span><span>Get Quote</span></button>
+        <button className="rounded-full px-2 py-1 border-2 border-[--secondary-button] hover:bg-[--secondary-button] hover:text-white transition-all duration-300 flex gap-1 justify-center items-center"><span><IoCallSharp /></span><Link href={"tel:03365954484"}>Get Quote</Link></button>
       </div>
 
 
@@ -224,7 +189,7 @@ const Navbar = () => {
                 <RxCross2 onClick={() => setDropDown(!DropDown)} className="text-[--text-color] relative z-20" />
               ) : (
                 <span className="flex gap-3 text-[20px] text-[--secondary-button] font-extralight items-center">
-                  <Link href={"tel:045419811"}><MdOutlinePhoneInTalk size={25} /></Link>
+                  <Link href={"tel:03335954484"}><MdOutlinePhoneInTalk size={25} /></Link>
                   <span onClick={() => setDropDown(!DropDown)} className="cursor-pointer">
                   <CiMenuFries size={25} />
                   </span>
