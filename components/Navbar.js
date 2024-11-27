@@ -1,9 +1,8 @@
 'use client'
 import "./Navbar.css"
-import { TiThMenu } from "react-icons/ti";
 import { IoIosArrowDown } from "react-icons/io";
-import { FaPhone } from "react-icons/fa";
-import { FaCalendarDay } from "react-icons/fa6";
+import {MdOutlinePhoneInTalk} from "react-icons/md"
+import { CiMenuFries } from "react-icons/ci";
 import { useState } from "react";
 import { RxCross2 } from "react-icons/rx";
 import { IoCallSharp } from "react-icons/io5";
@@ -116,12 +115,6 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="#airing" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
-                    <span>Airing</span>
-                    <span className="absolute z-[-100] left-0 top-0 bottom-0 bg-[--secondary-button] transition-all duration-300 ease-in-out w-0 group-hover:w-full"></span>
-                  </Link>
-                </li>
-                <li>
                   <Link href="#outdoor-advertising" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
                     <span>Outdoor Advertising</span>
                     <span className="absolute z-[-100] left-0 top-0 bottom-0 bg-[--secondary-button] transition-all duration-300 ease-in-out w-0 group-hover:w-full"></span>
@@ -230,10 +223,10 @@ const Navbar = () => {
               {DropDown ? (
                 <RxCross2 onClick={() => setDropDown(!DropDown)} className="text-[--text-color] relative z-20" />
               ) : (
-                <span className="flex gap-1 text-[20px] text-[--secondary-button] font-extralight items-center">
-                  <FaPhone />|
+                <span className="flex gap-3 text-[20px] text-[--secondary-button] font-extralight items-center">
+                  <Link href={"tel:045419811"}><MdOutlinePhoneInTalk size={25} /></Link>
                   <span onClick={() => setDropDown(!DropDown)} className="cursor-pointer">
-                    <TiThMenu />
+                  <CiMenuFries size={25} />
                   </span>
                 </span>
               )}
@@ -265,7 +258,6 @@ const Navbar = () => {
                         <li><Link href="#digital-marketing" className="block py-2 px-2 hover:text-[--secondary-button]" onClick={() => setDropDown(false)}>Digital Marketing</Link></li>
                         <li><Link href="#branding" className="block py-2 px-2 hover:text-[--secondary-button]" onClick={() => setDropDown(false)}>Branding</Link></li>
                         <li><Link href="#print-media" className="block py-2 px-2 hover:text-[--secondary-button]" onClick={() => setDropDown(false)}>Print Media</Link></li>
-                        <li><Link href="#airing" className="block py-2 px-2 hover:text-[--secondary-button]" onClick={() => setDropDown(false)}>Airing</Link></li>
                         <li><Link href="#outdoor-advertising" className="block py-2 px-2 hover:text-[--secondary-button]" onClick={() => setDropDown(false)}>Outdoor Advertising</Link></li>
                       </ul>
                     </div>

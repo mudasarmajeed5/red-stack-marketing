@@ -29,7 +29,7 @@ export default function ServicesSection() {
       description: "We leverage SEO, social media, and online ads to engage your digital audience with data-driven strategies.",
       icon: LineChart,
       imagePosition: "left",
-      image: "/images/digital marketing.png",
+      image: "/images/digital marketing.jpg",
     },
     {
       title: "Branding",
