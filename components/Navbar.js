@@ -52,7 +52,7 @@ const Navbar = () => {
 
 
       <div onClick={() => router.push('/')} className="md:text-3xl text-2xl cursor-pointer underline-offset-4 navbar-name">
-        <img src="https://colors-agency.vercel.app/Logo-Analysis.svg" width={55} alt="" />
+        <img src="./red-stack-logo.png" width={185} alt="" />
       </div>
 
       <div className="md:flex ml-[-5%] place-self-center gap-0 hidden" >
@@ -68,64 +68,9 @@ const Navbar = () => {
             onMouseEnter={() => toggleDha(true)}
             onMouseLeave={() => toggleDha(false)}
           >
-            <span>Services</span>
-            <span><IoIosArrowDown /></span>
+            <Link href={"#services"}>Services</Link>
           </button>
-          {isDhaOpen && (
-            <div
-              onMouseEnter={() => toggleDha(true)}
-              onMouseLeave={() => toggleDha(false)}
-              className="z-10 text-left bg-white divide-y divide-gray-100 rounded-lg shadow w-44 absolute"
-            >
-              <ul className="py-2 text-sm text-black">
-                <li>
-                  <Link href="#creative-agency" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
-                    <span>Creative Agency</span>
-                    <span className="absolute z-[-100] left-0 top-0 bottom-0 bg-[--secondary-button] transition-all duration-300 ease-in-out w-0 group-hover:w-full"></span>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#visual-story-telling" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
-                    <span>Visual Story Telling</span>
-                    <span className="absolute z-[-100] left-0 top-0 bottom-0 bg-[--secondary-button] transition-all duration-300 ease-in-out w-0 group-hover:w-full"></span>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#event-management" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
-                    <span>Event Management</span>
-                    <span className="absolute z-[-100] left-0 top-0 bottom-0 bg-[--secondary-button] transition-all duration-300 ease-in-out w-0 group-hover:w-full"></span>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#digital-marketing" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
-                    <span>Digital Marketing</span>
-                    <span className="absolute z-[-100] left-0 top-0 bottom-0 bg-[--secondary-button] transition-all duration-300 ease-in-out w-0 group-hover:w-full"></span>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#branding" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
-                    <span>Branding</span>
-                    <span className="absolute z-[-100] left-0 top-0 bottom-0 bg-[--secondary-button] transition-all duration-300 ease-in-out w-0 group-hover:w-full"></span>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#print-media" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
-                    <span>Print Media</span>
-                    <span className="absolute z-[-100] left-0 top-0 bottom-0 bg-[--secondary-button] transition-all duration-300 ease-in-out w-0 group-hover:w-full"></span>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#outdoor-advertising" className="relative px-4 py-2 flex justify-between items-center transition-all duration-300 ease-in-out group">
-                    <span>Outdoor Advertising</span>
-                    <span className="absolute z-[-100] left-0 top-0 bottom-0 bg-[--secondary-button] transition-all duration-300 ease-in-out w-0 group-hover:w-full"></span>
-                  </Link>
-                </li>
-              </ul>
-
-            </div>
-          )}
         </div>
-
 
         {/* About Us Dropdown */}
         <div className="px-2 py-1 rounded-lg relative">
@@ -212,21 +157,7 @@ const Navbar = () => {
                     onClick={() => toggleDha(!isDhaOpen)}
                   >
                     <span>Services</span>
-                    <span><IoIosArrowDown /></span>
                   </button>
-                  {isDhaOpen && (
-                    <div className="z-10 text-left divide-y divide-gray-100 rounded-lg w-44 mt-2">
-                      <ul className="py-2 ml-4 text-sm">
-                        <li><Link href="#creative-agency" className="block py-2 px-2 hover:text-[--secondary-button]" onClick={() => setDropDown(false)}>Creative Agency</Link></li>
-                        <li><Link href="#visual-story-telling" className="block py-2 px-2 hover:text-[--secondary-button]" onClick={() => setDropDown(false)}>Visual Story Telling</Link></li>
-                        <li><Link href="#event-management" className="block py-2 px-2 hover:text-[--secondary-button]" onClick={() => setDropDown(false)}>Event Management</Link></li>
-                        <li><Link href="#digital-marketing" className="block py-2 px-2 hover:text-[--secondary-button]" onClick={() => setDropDown(false)}>Digital Marketing</Link></li>
-                        <li><Link href="#branding" className="block py-2 px-2 hover:text-[--secondary-button]" onClick={() => setDropDown(false)}>Branding</Link></li>
-                        <li><Link href="#print-media" className="block py-2 px-2 hover:text-[--secondary-button]" onClick={() => setDropDown(false)}>Print Media</Link></li>
-                        <li><Link href="#outdoor-advertising" className="block py-2 px-2 hover:text-[--secondary-button]" onClick={() => setDropDown(false)}>Outdoor Advertising</Link></li>
-                      </ul>
-                    </div>
-                  )}
                 </div>
 
                 {/* About Dropdown */}

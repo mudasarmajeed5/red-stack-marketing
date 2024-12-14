@@ -1,9 +1,8 @@
 import TextAnimation from "@/components/TextAnimation";
-import BlogWorkSection from "@/components/blog-work-section";
 import Carousel from "@/components/carousel";
 import ContactUsSection from "@/components/contact-us-section";
 import Footer from "@/components/footer";
-import ServicesSection from "@/components/services-section";
+import ServiceShowCase from "@/components/service-showcase";
 import Link from "next/link";
 export default function Home() {
   return (
@@ -24,7 +23,7 @@ export default function Home() {
         <Carousel />
         </div>
       </div>
-      <ServicesSection/>
+      <div id="services"><ServiceShowCase/></div>
       <div id="blogs">
       {/* <BlogWorkSection/> */}
       </div>
