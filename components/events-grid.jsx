@@ -5,7 +5,7 @@ import { Send, Hexagon, RouteIcon as Road, Building, Map, Star, Music, Ruler, Vi
 import { cn } from "@/lib/utils"
 
 export default function EventsGrid() {
-  const [theme, setTheme] = useState('white')
+  const [theme, setTheme] = useState('red')
 
   const events = [
     { icon: Send, label: 'Corporate Events' },
@@ -28,22 +28,7 @@ export default function EventsGrid() {
         <div className="flex justify-between items-center mb-12">
           <h1 className="text-4xl font-bold">Events & Activations</h1>
           <div className="space-x-4">
-            <button
-              onClick={() => setTheme('white')}
-              className={cn(
-                "px-4 py-2 rounded-md",
-                theme === 'white' ? 'bg-white text-black' : 'bg-black text-white border border-white'
-              )}>
-              White Theme
-            </button>
-            <button
-              onClick={() => setTheme('red')}
-              className={cn(
-                "px-4 py-2 rounded-md",
-                theme === 'red' ? 'bg-red-600 text-white' : 'bg-black text-white border border-red-600'
-              )}>
-              Red Theme
-            </button>
+            
           </div>
         </div>
         

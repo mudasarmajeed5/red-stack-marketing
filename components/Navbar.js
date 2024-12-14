@@ -48,7 +48,7 @@ const Navbar = () => {
 
   const router = useRouter()
   return (
-    <div className='text-center bg-gradient-to-r from-black via-red-900 to-black text-white sticky top-0 py-2 px-4 grid md:place-items-start justify-items-start place-items-start md:grid-cols-3 grid-cols-2 grid-rows-1 text-[--text-color] z-50'>
+    <div className='text-center bg-black text-white sticky top-0 py-2 px-4 grid md:place-items-start justify-items-start place-items-start md:grid-cols-3 grid-cols-2 grid-rows-1 text-[--text-color] z-50'>
 
 
       <div onClick={() => router.push('/')} className="md:text-3xl text-2xl cursor-pointer underline-offset-4 navbar-name">
@@ -156,7 +156,7 @@ const Navbar = () => {
                     className="getquote1 w-full hover:-translate-y-[1px] transition-all flex justify-between items-center"
                     onClick={() => toggleDha(!isDhaOpen)}
                   >
-                    <span>Services</span>
+                    <Link href={"#services"}>Services</Link>
                   </button>
                 </div>
 
