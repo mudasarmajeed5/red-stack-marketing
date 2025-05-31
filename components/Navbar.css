@@ -1,14 +1,14 @@
 :root {
     --primary-bg-color: #ffffff;  /* White */
     --primary-text-color: #ffffff;  /* White text for navbar */
-    --secondary-button: #e63946; /* Red for buttons and highlights */
+    --secondary-button: #e6e639; /* Red for buttons and highlights */
     --black-color: #000000; /* Black color */
     --slate-blue: #1d3557; /* Blue-ish color for vertical buttons */
     --bg-color: #111010; /* Light background for content areas */
     --navbar-bg-color: #333333; /* Dark background for navbar */
     --navbar-border-color: #444444; /* Border color for navbar items */
     --secondary-text-color: #888888; /* Grey text for secondary items */
-    --button-hover-bg: #e63946; /* Red for hover effects on buttons */
+    --button-hover-bg: #d1ca44; /* Red for hover effects on buttons */
     --button-text-color: #ffffff; /* White text on buttons */
     --link-hover-color: #e63946; /* Red for link hover effect */
     --link-text-color: #333333; /* Dark text for links */

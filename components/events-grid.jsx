@@ -1,11 +1,8 @@
 'use client'
 
-import { useState } from 'react'
 import { Send, Hexagon, RouteIcon as Road, Building, Map, Star, Music, Ruler, Video, Box, Camera } from 'lucide-react'
-import { cn } from "@/lib/utils"
 
 export default function EventsGrid() {
-  const [theme, setTheme] = useState('red')
 
   const events = [
     { icon: Send, label: 'Corporate Events' },
@@ -23,33 +20,25 @@ export default function EventsGrid() {
   ]
 
   return (
-    (<div className="min-h-screen bg-black text-white p-8">
+    <div className="min-h-screen bg-black text-white py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="flex justify-between items-center mb-12">
-          <h1 className="text-4xl font-bold">Events & Activations</h1>
-          <div className="space-x-4">
-            
-          </div>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {events.map((event, index) => (
+        <h1 className="text-4xl text-center font-bold mb-12 flex justify-center sm:text-left">
+          Events & <span className="text-yellow-400"> Activations</span>
+        </h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {events.map(({ icon: Icon, label }, index) => (
             <div
               key={index}
-              className={cn(
-                "p-8 rounded-lg flex flex-col items-center justify-center space-y-4 transition-colors duration-300",
-                theme === 'red' 
-                  ? 'bg-red-600/10 hover:bg-red-600/20' 
-                  : 'bg-white/10 hover:bg-white/20'
-              )}>
-              <event.icon
-                className={cn("w-12 h-12", theme === 'red' ? 'text-red-500' : 'text-white')} />
-              <span className="text-lg font-medium">{event.label}</span>
+              className="bg-gray-900 shadow-lg rounded-lg p-8 flex flex-col items-center space-y-4 text-center
+                transition-transform hover:scale-105
+                hover:shadow-yellow-900/70"
+            >
+              <Icon className="w-12 h-12 text-yellow-400" />
+              <span className="text-lg font-semibold">{label}</span>
             </div>
           ))}
         </div>
       </div>
-    </div>)
-  );
+    </div>
+  )
 }
-

@@ -1,18 +1,18 @@
 import React from 'react'
-import DigitalServices from '@/components/digital-services-dark'
+import MediaServices from '@/components/MediaServices'
 
-const DigitalService = () => {
+const MediaService = () => {
   return (
     <div className="font-playfair">
       <div className="min-h-[90vh] flex flex-col justify-center items-center text-white">
         <p className="text-2xl md:text-4xl font-bold max-w-xl text-center px-4">
-          Explore our <span className="text-yellow-400 font-semibold">cutting-edge digital solutions</span> crafted to elevate your business and drive innovation.
+          Discover our <span className="text-yellow-400 font-semibold">dynamic media solutions</span> designed to capture attention and amplify your brand story.
         </p>
         <span className="mt-10 animate-bounce text-yellow-400 text-xl">⬇ Scroll down</span>
       </div>
-      <DigitalServices />
+      <MediaServices />
     </div>
   )
 }
 
-export default DigitalService
+export default MediaService

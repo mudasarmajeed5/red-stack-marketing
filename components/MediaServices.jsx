@@ -1,30 +1,49 @@
 import {
-  Pencil,
-  Lightbulb,
-  Rocket,
-  PenTool,
-  Package,
-  Smartphone,
+  BarChart3,
+  Camera,
+  Users2,
+  LineChart,
+  Newspaper,
+  Laptop2,
+  MonitorSmartphone,
 } from 'lucide-react';
 
-export default function CreativeServices() {
+export default function MediaServices() {
   const services = [
-    { title: 'Graphic Design', icon: Pencil },
-    { title: 'Logo Development', icon: Lightbulb },
-    { title: 'Animations', icon: Rocket },
-    { title: 'Brand Development', icon: PenTool },
-    { title: 'Product & Packaging Design', icon: Package },
-    { title: 'UI/UX Design', icon: Smartphone },
+    {
+      title: 'TVC Production',
+      icon: Camera,
+    },
+    {
+      title: 'Print Media',
+      icon: Users2,
+    },
+    {
+      title: 'DVC Production',
+      icon: LineChart,
+    },
+    {
+      title: 'Out of Home Buying',
+      icon: Newspaper,
+    },
+    {
+      title: 'Photgraphy & Videography',
+      icon: Laptop2,
+    },
+    {
+      title: 'Music Production',
+      icon: MonitorSmartphone,
+    },
   ];
 
   return (
     <section className="py-16 px-4 bg-black text-white">
       <div className="max-w-6xl mx-auto">
         <h1 className="text-4xl text-center font-bold mb-12 flex justify-center sm:text-left">
-          Creative <span className="text-yellow-400"> &nbsp;Services</span>
+          Media <span className="text-yellow-400">&nbsp;Services</span>
         </h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div
               key={index}

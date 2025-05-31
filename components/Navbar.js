@@ -9,6 +9,7 @@ import { IoCallSharp } from "react-icons/io5";
 import { useRouter } from "next/navigation";
 
 import Link from "next/link";
+import logoBase64 from "./logo";
 const Navbar = () => {
   const [DropDown, setDropDown] = useState(false)
   const [isProjectsOpen, setIsProjectsOpen] = useState(false);
@@ -52,7 +53,12 @@ const Navbar = () => {
 
 
       <div onClick={() => router.push('/')} className="md:text-3xl text-2xl cursor-pointer underline-offset-4 navbar-name">
-        <img src="./red-stack-logo.png" width={185} alt="" />
+       <img
+        src={logoBase64}
+        width="185"
+        height="40"
+        alt="Brainwave Logo"
+      />
       </div>
 
       <div className="md:flex ml-[-5%] place-self-center gap-0 hidden" >

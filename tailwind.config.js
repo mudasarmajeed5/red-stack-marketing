@@ -8,6 +8,9 @@ module.exports = {
   ],
   theme: {
   	extend: {
+		fontFamily: {
+        playfair: ['"Playfair Display"', 'serif'],
+      },
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
